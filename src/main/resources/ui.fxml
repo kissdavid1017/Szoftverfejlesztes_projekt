@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Ui"
-            prefHeight="400.0" prefWidth="600.0">
+<GridPane fx:id="board" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" styleClass="board" stylesheets="@ui.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.GameController">
+  <columnConstraints>
+      <ColumnConstraints fx:id="first" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="1" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="2" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="4" />
+       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="6" />
 
-</AnchorPane>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lentjobb" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.rowIndex="4" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Pane styleClass="cel" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Pane styleClass="bal" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+      <Pane styleClass="bal" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+
+   </children>
+
+</GridPane>

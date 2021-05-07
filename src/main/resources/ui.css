@@ -1,0 +1,48 @@
+.board{
+
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-grid-lines-visible: true;
+    -fx-background-color: whitesmoke;
+
+
+
+
+
+
+
+}
+.label{
+    -fx-font-weight: bold;
+    -fx-font-size: 25;
+
+
+
+}
+
+.bal{
+    -fx-border-color: red;
+    -fx-border-width: 0 0 0 5;
+}
+.lent{
+    -fx-border-color: red;
+    -fx-border-width: 0 0 5 0;
+}
+
+.jobb{
+    -fx-border-color: red;
+    -fx-border-width: 0 5 0 0;
+}
+.fent{
+    -fx-border-color: red;
+    -fx-border-width: 5 0 0 0;
+
+}
+.lentjobb{
+    -fx-border-color: red;
+    -fx-border-width: 0 5 5 0;
+}
+.cel{
+    -fx-border-color: red;
+    -fx-border-width: 0 5 5 5;
+}
