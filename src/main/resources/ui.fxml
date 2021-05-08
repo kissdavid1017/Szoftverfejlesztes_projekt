@@ -35,9 +35,9 @@
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="6" GridPane.rowIndex="3" />
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.rowIndex="4" />
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-      <Pane styleClass="cel" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-      <Pane styleClass="bal" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-      <Pane styleClass="bal" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cel" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="4" GridPane.rowIndex="6" />
 
    </children>
 
