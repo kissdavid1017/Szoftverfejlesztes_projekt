@@ -26,21 +26,30 @@
 }
 .lent{
     -fx-border-color: red;
-    -fx-border-width: 0 0 5 0;
+
+    -fx-border-width:0 0 5 0;
+
 }
 
 .jobb{
     -fx-border-color: red;
     -fx-border-width: 0 5 0 0;
+
 }
 .fent{
     -fx-border-color: red;
-    -fx-border-width: 5 0 0 0;
+
+    -fx-border-width:5 0 0 0;
+
 
 }
 .lentjobb{
     -fx-border-color: red;
     -fx-border-width: 0 5 5 0;
+}
+.jobbbal{
+    -fx-border-color: red;
+    -fx-border-width: 0 5 0 5;
 }
 .cel{
     -fx-border-color: red;

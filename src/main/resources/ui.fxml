@@ -22,22 +22,45 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="1" />
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="2" />
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="4" />
-       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="6" />
 
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+      <Pane fx:id="twoezero" prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+       <Pane fx:id="sixzero" prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+
+      <Pane fx:id="onetwoe" prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="3" GridPane.rowIndex="2" />
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="6" GridPane.rowIndex="2" />
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lentjobb" GridPane.columnIndex="3" GridPane.rowIndex="3" />
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.rowIndex="4" />
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Pane fx:id="sixthre" prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+      <Pane fx:id="zerofourpane" prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+      <Pane fx:id="fourfour" prefHeight="200.0" prefWidth="200.0" styleClass="lent" GridPane.columnIndex="4" GridPane.rowIndex="4" />
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cel" GridPane.columnIndex="2" GridPane.rowIndex="5" />
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="6" GridPane.rowIndex="6" />
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="jobb" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="fent" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="jobb" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="bal" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="jobb" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="jobb" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="fent" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="fent" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="jobb" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="jobb" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="fent" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="fent" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="jobb" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="jobbbal" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="fent" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="fent" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+
 
    </children>
 

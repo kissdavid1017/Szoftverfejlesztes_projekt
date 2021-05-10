@@ -1,25 +1,21 @@
 package Game;
 
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+
+import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
+
 import javafx.scene.paint.Color;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Circle;
-import model.GameModel;
-import model.Position;
 
 public class GameController {
-    private static final int BOARD_SIZE = 7;
 
     @FXML
     private GridPane board;
-
-
-    //private Circle circle=new Circle(40,Color.BLUE);
 
 
     @FXML
@@ -35,32 +31,31 @@ public class GameController {
                     case RIGHT -> moveRight();
                     case UP -> moveUp();
                     case DOWN -> moveDown();
-
-
                 }
             }
         });
+
     }
 
+
+    /**
+     *
+     * @param row the row index of the circle
+     * @param col the column index of the circle
+     * @return creates a circle on the given position
+     */
     private Circle createCircle(int row, int col) {
-        var circle = new Circle(40);
+        var circle = new Circle(35);
         circle.setFill(Color.BLUE);
-
-
         board.add(circle, col, row);
-
         return circle;
 
     }
 
-    private void deleteCircle(Circle circle) {
-
-
-        board.getChildren().remove(circle);
-
-    }
-
-
+    /**
+     *
+     * @return creates a Label object on the given position
+     */
     private Label createLabel() {
         var label = new Label();
         label.setText("CÉL");
@@ -70,92 +65,160 @@ public class GameController {
         return label;
     }
 
-    //@FXML
+    /**
+     * the ball move left until it meet a wall or the edge of the board
+     */
     private void moveLeft() {
 
-        var circle = board.getChildren().get(16);
+        var circle = board.getChildren().get(36);
 
         var row = GridPane.getRowIndex(circle);
         var col = GridPane.getColumnIndex(circle);
-        var position = new Position(row, col -1);
+
         while (col>0) {
+            if(getNodeFromGridPane(board,col,row).toString().equals("bal")||getNodeFromGridPane(board,col,row).toString().equals("jobbbal")) {
+                break;
+            }
+            else if(isGoal()){
+               break;
+            }
+            else {
 
-            GridPane.setColumnIndex(circle, col - 1);
-
-            col = GridPane.getColumnIndex(circle);
-
-
+                GridPane.setColumnIndex(circle, col - 1);
+                col = GridPane.getColumnIndex(circle);
+            }
 
         }
 
+
         System.out.printf("Circle moved to (%d,%d)\n", row, col);
 
-
     }
-
+    /**
+     * the ball move right until it meet a wall or the edge of the board
+     */
     private void moveRight() {
 
-        var circle = board.getChildren().get(16);
+        var circle = board.getChildren().get(36);
 
         var row = GridPane.getRowIndex(circle);
         var col = GridPane.getColumnIndex(circle);
-        var position = new Position(row, col + 1);
+
         while (col<6) {
+            if(getNodeFromGridPane(board,col,row).toString().equals("jobb")||getNodeFromGridPane(board,col,row).toString().equals("lentjobb")|| getNodeFromGridPane(board,col,row).toString().equals("jobbbal")) {
+                break;
+            }
+            else if(isGoal()){
+                break;
+            }
+            else {
 
-            GridPane.setColumnIndex(circle, col + 1);
-            col++;
+                GridPane.setColumnIndex(circle, col + 1);
 
-            col = GridPane.getColumnIndex(circle);
+
+                col = GridPane.getColumnIndex(circle);
+            }
 
 
         }
         System.out.printf("Circle moved to (%d,%d)\n", row, col);
 
-
-
     }
 
+    /**
+     * the ball move up until it meet a wall or the edge of the board
+     */
     private void moveUp() {
 
-        var circle = board.getChildren().get(16);
+        var circle = board.getChildren().get(36);
 
         var row = GridPane.getRowIndex(circle);
         var col = GridPane.getColumnIndex(circle);
-        var position = new Position(row-1, col);
-        while (col>0) {
 
-            GridPane.setRowIndex(circle,row-1);
-            col++;
 
-            row=GridPane.getRowIndex(circle);
+        while (row>0) {
 
+            if(getNodeFromGridPane(board,col,row).toString().equals("fent")){
+                break;
+                }
+            else if(isGoal()){
+                break;
+            }
+
+            else {
+
+                GridPane.setRowIndex(circle, row - 1);
+
+                row = GridPane.getRowIndex(circle);
+            }
 
         }
         System.out.printf("Circle moved to (%d,%d)\n", row, col);
 
-
-
     }
-
+    /**
+     * the ball move down until it meet a wall or the edge of the board
+     */
     private void moveDown() {
 
-        var circle = board.getChildren().get(16);
+        var circle = board.getChildren().get(36);
 
         var row = GridPane.getRowIndex(circle);
         var col = GridPane.getColumnIndex(circle);
-        var position = new Position(row+1, col);
+
+
         while (row<6) {
 
-            GridPane.setRowIndex(circle,row+1);
-            col++;
+            if(getNodeFromGridPane(board,col,row).toString().equals("lent")|| getNodeFromGridPane(board,col,row).toString().equals("lentjobb")){
+                break;
+            }
+            else if(isGoal()){
+                break;
+            }
+            else {
+                GridPane.setRowIndex(circle,row+1);
 
-            row=GridPane.getRowIndex(circle);
+
+                row = GridPane.getRowIndex(circle);
 
 
+            }
         }
+
         System.out.printf("Circle moved to (%d,%d)\n", row, col);
 
-
-
     }
+
+    /**
+     *
+     * {@return whether the game is solved}
+     */
+    private boolean isGoal(){
+        var circle = board.getChildren().get(36);
+
+        var row = GridPane.getRowIndex(circle);
+        var col = GridPane.getColumnIndex(circle);
+        if(getNodeFromGridPane(board,col,row).toString().equals("cel")){
+            return true;
+        }
+        else
+            return false;
+    }
+
+
+    /**
+     *
+     *
+     * @return the node that is on the given indexes
+     */
+    private ObservableList<String> getNodeFromGridPane(GridPane gridPane, int col, int row) {
+        for (Node node : gridPane.getChildren()) {
+            if (GridPane.getColumnIndex(node) == col && GridPane.getRowIndex(node) == row) {
+                return node.getStyleClass();
+            }
+        }
+        return null;
+    }
+
+
 }
