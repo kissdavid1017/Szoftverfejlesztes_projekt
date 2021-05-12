@@ -235,7 +235,7 @@ public class GameController {
         var circle = board.getChildren().get(36);
         var row = GridPane.getRowIndex(circle);
         var col = GridPane.getColumnIndex(circle);
-        if(col==BOARD_SIZE||row==BOARD_SIZE){
+        if(col==BOARD_SIZE+1||row==BOARD_SIZE+1){
             return false;
         }
         else
