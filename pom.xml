@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>hu.unideb.inf</groupId>
-    <artifactId>Szoftverfejlesztes Projekt</artifactId>
+    <artifactId>Szoftverfejlesztes_projekt</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <description></description>
@@ -30,6 +30,18 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>3.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>3.0.0</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
@@ -53,7 +65,10 @@
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
+
+
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -143,6 +158,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.2.0</version>
+                <configuration>
+                    <show>private</show>
+                    <detectLinks>true</detectLinks>
+                    <links>
+                        <link>https://javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.1</link>
+                    </links>
+                </configuration>
                 <reportSets>
                     <reportSet>
                         <reports>

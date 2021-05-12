@@ -8,6 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
+/**
+ * Class for building the user interface
+ */
+
 public class GameApplication extends Application {
 
 
